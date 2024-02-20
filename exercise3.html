@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../semicolon.png" type="img/png" />
-    <title>Exs 1 | FlexBox</title>
+    <title>Exs 3 | Grid</title>
     <style>
       body,
       html {
@@ -11,7 +11,7 @@
         padding: 0;
         font-size: 20px;
         font-family: arial;
-        color: white;
+        color: black;
         text-transform: uppercase;
         text-align: center;
       }
@@ -22,56 +22,62 @@
         border: 5px solid #333;
         box-sizing: border-box;
         padding: 5px;
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "aside main"
+          "nav main"
+          "footer footer";
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr 1fr 1.3fr 1fr;
       }
 
       header {
+        grid-area: header;
         background-color: #b063d8;
-        padding: 40px 0;
-      }
-
-      .content {
         display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      .sidebar {
-        flex: 1;
-      }
-
-      .sidebar aside {
+      aside {
+        grid-area: aside;
         background-color: #2f93ff;
         padding: 60px 0;
       }
 
-      .sidebar nav {
+      nav {
+        grid-area: nav;
         background-color: #e45765;
         padding: 100px 0;
       }
 
       main {
+        grid-area: main;
         background-color: #e0aa77;
         box-sizing: border-box;
-        flex: 3;
+        flex: 2;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
       footer {
+        grid-area: footer;
         background-color: #666;
         padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <header>Header</header>
-      <div class="content">
-        <div class="sidebar">
-          <aside>Aside</aside>
-          <nav>Nav</nav>
-        </div>
-        <main>Main</main>
-      </div>
+      <aside>Aside</aside>
+      <nav>Nav</nav>
+      <main>Main</main>
       <footer>Footer</footer>
     </div>
   </body>
