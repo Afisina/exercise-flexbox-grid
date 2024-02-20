@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../semicolon.png" type="img/png" />
+    <title>CSS Grid | Grid Item Properties</title>
+    <style>
+      * {
+        margin: 10px;
+        padding: 0;
+        background-color: #ddd;
+      }
+
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: [line1] minmax(200px, 300px) [line2] 1fr [line3] 1fr [line4];
+        grid-template-rows: [baris1] 100px [baris2] 100px [baris3] 100px [baris4];
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .my-item {
+        background-color: lightblue;
+
+        /* grid-column-start: -1;
+        grid-column-end: -2;
+        grid-row-start: -4;
+        grid-row-end: -1; */
+
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Menentukan tempat dari grid item dengan mengacu pada nomor/nama grid line yang spesifik</p>
+    <ul>
+      <li>grid-column start | grid-column-end</li>
+      <li>grid-row-start | grid-row-end</li>
+      <li>grid-column | grid-row : shorthand untuk start & end pada grid column & row</li>
+    </ul>
+    <div class="container">
+      <div class="item my-item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>
