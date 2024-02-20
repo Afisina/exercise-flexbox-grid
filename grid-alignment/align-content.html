@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../semicolon.png" type="img/png" />
+    <title>Grid Alignments | Align Content</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            height: 700px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+            align-content: space-evenly;
+        }
+
+        .item {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+    </style>
+  </head>
+  <body>
+    <h4>align-content: start | end | center | stretch | space-around | space-between | space-evenly</h4>
+    <p>mengatur posisi seluruh grid container pada sumbu vertical. Ini bisa dilakukan jika ketika uk. total grid lebih kecil dari ukuran containernya. Bisasanya ketika grid itemsnya menggunkana ukuran yang fixed (px).</p>
+    
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+  </body>
+</html>
+
