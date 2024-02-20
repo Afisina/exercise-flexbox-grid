@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../semicolon.png" type="img/png" />
+    <title>CSS Grid | Grid Template</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        display: grid;
+        grid-template: 
+        [b1-mulai] 'header header header' 50px [b1-akhir]
+        [b2-mulai] 'aside main main' 100px [b2-akhir]
+        [b3-mulai] 'aside main main' 80px [b3-akhir]
+        [b4-mulai] 'footer footer footer' 50px [b4-akhir];
+      }
+
+      .item {
+        background-color: rgb(138, 209, 254);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+
+      .item:nth-child(odd) {
+        background-color: rgb(255, 142, 142);
+      }
+    </style>
+  </head>
+  <body>
+    <h4>grid-template</h4>
+    <p>Shorthand untuk mendefinisikan grid-template-rows, grid-template-columns, grid-template-areas dalam 1 deklarasi</p>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+  </body>
+</html>
+

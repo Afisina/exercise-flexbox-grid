@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../semicolon.png" type="img/png" />
+    <title>CSS Grid | Gallery</title>
+    <style>
+      html,
+      body,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .gallery {
+        width: 80%;
+        margin: auto;
+        border: 10px solid white;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 5px;
+      }
+
+      .gallery li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <ul>
+        <li><img src="img/1.jpeg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+        <li><img src="img/5.jpg" alt=""></li>
+        <li><img src="img/6.jpg" alt=""></li>
+        <li><img src="img/7.jpg" alt=""></li>
+        <li><img src="img/8.jpg" alt=""></li>
+        <li><img src="img/9.jpg" alt=""></li>
+        <li><img src="img/10.jpg" alt=""></li>
+      </ul>
+  </body>
+</html>
+
