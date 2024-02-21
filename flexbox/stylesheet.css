@@ -1,0 +1,148 @@
+body,
+html {
+  background-color: #ddd;
+  line-height: 1.5;
+}
+
+.container-satu {
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main {
+  flex: 3;
+  order: 2;
+  padding-right: 20px;
+}
+
+.sidebar-satu {
+  flex: 1;
+  order: 1;
+}
+
+.sidebar-dua {
+  flex: 1;
+  order: 3;
+}
+
+/* Fitur */
+.container-dua {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.fitur {
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+.fitur.satu {
+  background-color: rgb(173, 173, 238);
+}
+
+.fitur.dua {
+  background-color: pink;
+}
+
+.fitur.tiga {
+  background-color: burlywood;
+}
+
+/* Gallery */
+.container-tiga {
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery {
+  width: 45%;
+  margin-right: 10px;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+/* CARD */
+.container-empat {
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eee;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card .header {
+  height: 100px;
+  background-color: gray;
+}
+
+.card.besar {
+  transform: scale(1.05);
+}
+
+/* CENTERING */
+.container-lima {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  border: 5px solid black;
+  display: flex;
+}
+
+.kotak {
+  width: 200px;
+  height: max-content;
+  background-color: red;
+  color: white;
+  margin: auto;
+  display: flex;
+  text-align: center;
+}
+
+.kotak span {
+  margin: auto;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .container-dua {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fitur {
+    width: 30%;
+  }
+
+  .gallery {
+    width: 20%;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .card.besar {
+    transform: scale(1.13);
+  }
+}
